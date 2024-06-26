@@ -1,0 +1,283 @@
+#################################### WHILE LOOP ####################################
+
+## WAP TO EXTRACT ALL THE DIGITS FROM THE STRING INPUT
+
+string = input('enter the string: ')
+digit = ''
+
+i = 0
+while i < len(string):
+     if string[i].isdigit():
+         digit += string[i]
+   
+     i += 1
+print(digit)
+
+
+
+## WAP TO EXTRACT ALL THE EVEN INTEGER NUMBER PRESENT IN THE TUPLE COLLECTION
+
+tuple_ = eval(input('enter the tuple: '))
+new_tuple = ()
+i = 0
+while i < len(tuple_):
+    if type(tuple_[i]) == int and tuple_[i] % 2== 0:
+        new_tuple += (tuple_[i],) # using , was important to make it a tuple, not just an integer
+    i += 1
+print(new_tuple)
+
+
+################################## Dictionary: Lookup method #######################################
+
+dict_ = {2:'hii', 45.4:[1,2], 'hii':56, 89:'hii'}
+print(dict_[2])      
+dict_[2] = 'helllo'  ## lookup method
+print(dict_)
+ 
+################################## FOR LOOP #######################################
+
+
+WAP TO GET THE NAME(key) AND COUNT(value) PAIR
+##names = ['apple', 'google', 'apple', 'yahoo', 'yahoo', 'facebook', 'apple', 'gmail", "gmail', 'gmail', 'gmail']
+
+names = ['apple', 'google', 'apple', 'yahoo', 'yahoo', 'facebook', 'apple', 'gmail", "gmail', 'gmail', 'gmail']
+dict_ = {}
+for element in names:
+    if element not in dict_:
+        dict_[element] = 1
+    else:
+        dict_[element] += 1
+print(dict_)
+
+
+
+
+## Extract all the string which endswith '5'
+## numbers = ['51', '12', '123', '12345', '125', '905', '55', '15', '95655', '55555']
+
+numbers = ['51', '12', '123', '12345', '125', '905', '55', '15', '95655', '55555']
+newnum=[]
+for i in  numbers:
+    if i[-1] == '5':
+        newnum.append(i)
+        
+print(newnum)
+
+
+
+
+##WAP to get following output ( into dictionary)
+## names = ['apple', 'google', 'apple', 'yahoo', 'yahoo', 'google', 'gmail', 'gmail', 'gmail']
+#output should be {'apple': [0, 2], 'google': [1, 5], 'yahoo': [3, 4], 'gmail': [6, 7, 8]}
+
+names = ['apple', 'google', 'apple', 'yahoo', 'yahoo', 'facebook', 'apple', 'gmail", "gmail', 'gmail', 'gmail']
+name={}
+for i in range(len(names)):
+    if (names[i]) not in name:
+        name[names[i]] =[i]
+    else:
+        name[names[i]] += [i]
+print(name)    
+
+
+
+
+####WAP to reverse the given string s= hello o/p olleh
+
+string = input('enter the string: ')
+out = []
+for word in string.split():        
+        out.append(word[::-1])
+print(out)
+
+
+
+
+##WAP to get the following output    s = 'hai hello good evening'
+##o/p = {'hai':3, 'hello':5, 'good':4, 'evening':7}
+
+s = 'hai hello good evening'
+dict_ = {}
+for word in s.split():  ##['hai', 'hello', 'good', 'evening']
+    dict_[word] = len(word)
+print(dict_)
+
+
+
+
+##WAP to get following output   l = ['python.py', 'google.com', 'yahoo.in', 'file.db']
+##o/p = ['py', 'com,', 'in', 'db']
+
+l = ['python.py', 'google.com', 'yahoo.in', 'file.db']
+newlist=[]
+spliting='' 
+for word in l:
+    spliting =  word.split('.')
+    newlist.append(spliting[-1])
+print (newlist ) 
+
+
+
+
+##WAP to count the number of occurance of the specified character in string WITHOUT USING COUNT
+##s = 'programming'
+##ch = 'm'
+
+s = 'programming'
+ch = 'm'
+count=0
+for i in s.split():
+    if i == ch:
+        count+=1
+print (f'Count of {ch}:', count)
+
+
+
+
+##WAP to get the following output
+#l = [1,2,3,-4,-5, 'wrfe' , [12,24]]
+##output = [1,2,3,4,5]
+ 
+l = [1,2,3,-4,-5, 'wrfe' , [12,24]]
+output=[]
+for num in l:
+    if type(num)== int:
+        output.append(abs(num))
+print(output)
+
+ 
+######################################BREAK STATEMENT######################################
+
+##3. WAP TO CHECK THE GIVEN TUPLE IS HOMOGENOUS OR NOT
+
+STRING=  eval(input('enter value of tuple :'))
+tuple=()
+Htype=type(STRING[0])
+for i in STRING:
+    if type(i) != Htype:
+        print ( 'Not homogeneous')
+        break
+else:
+    print ('Homogeneous')
+
+
+
+
+##4. WAP TO PRINT THE INITIAL INDEX OF THE GIVEN CHARACTER
+##STRING = 'INITIAL'
+
+STRING = 'INITIAL'
+char = 'I'
+
+# Initialize index variable to store the index of the character
+index = -1
+
+# Iterate through each character in the string
+for i in range(len(STRING)):
+    if STRING[i] == char:
+        index = i
+        break
+if index != -1:
+    print(f"The initial index of '{char}' in '{STRING}' is: {index}")
+
+###################################### CONTINUE STATEMENT ######################################
+
+##3. WAP TO EXTRACT ALL THE COMPLEX NUMBERS FROM THE GIVEN SET COLLECTION
+
+set=eval(input('enter set val:'))
+complexn=[]
+
+for item in set:
+    if type(item) == complex:
+        complexn.append(item)
+        continue
+print(complexn)
+
+
+
+
+list
+
+
+##. WAP TO CREATE A LIST OF NUMBER WHOSE LAST 2 DIGITS ARE DIVISIBLE BY 4
+# list_ = [345, 653, 1098, 716, 7764, 1796, 1084]
+
+##. WAP TO CREATE THE LIST OF KEYS IF THE VALUE ARE EVEN
+# DICT_ = {'A':1, 'B':2, 'C':3, 'D':4}   #out = ['B', 'D']
+
+## WAP TO CREATE A NEW LIST, WHICH CONSIST OF NAMES STRATS WITH CONSONENTS
+# NAMES = ['APPLE', 'YOUTUBE', 'EMAIL', 'GMAIL', 'YAHOO']
+
+
+
+
+
+
+
+
+set
+##2. WAP TO EXTRACT ALL THE VOWELS IN THE STRING
+# string = 'hello have a good day'
+
+##3. TAKE STRING INPUT, IF THE LENGTH OF STRING IS EVEN GET THE REVERSE STRING ELSE ALTERNAT CHARCTER
+# string = 'hello have a good day'
+
+##4. TAKE A LIST OF INTEGER NUMBER, IF THE NUMBER IS EVEN GET SQUARE OF IT ELSE CUBE
+# list_ = [1,2,3,4,5,6,7,8]
+
+
+
+dict
+
+
+##2. WAP TO GET THE FOLLWOING OUTPUT
+# string = 'python java c++ web sql'
+# # dict_ = {'python':'nohtyp', 'java':'avaj'}
+
+##3. WAP TO GET THE FOLLWOING OUTPUT
+# string = 'python java c++ web sql'
+# # dict_ = {'python':'nohtyp', 'java':'avaj', 'c++':3, ''sql:3, 'web':3}
+
+##4. WAP TO THE FOLLOWING OUTPUT
+# DICT_ = {'a':1, 'b':2, 'c':3}
+# out: {1: 'a', 2: 'b', 3: 'c'}
+
+
+
+#############################  NESTED FOR LOOP  #############################
+## wap to get the following output
+LIST_ = [1234, 'HEllo@', 67, 7-9j, 'goOD#', 89.88]
+out = [6, 'heLLO@', 6, 'GOod#', ('89', '88')]
+
+list_ = [1234, 'HEllo@', 67, 7-9j, 'goOD#', 89.88]
+out=[]
+for element in list_:
+    if type(element) == str:
+        new_string = ''
+        for char in element:
+            if char.islower():
+                new_string += char.upper()
+            elif char.isupper():
+                new_string += char.lower()
+            else:
+                new_string += char  # Append special characters unchanged
+        out.append(new_string)
+    elif type(element) == float:
+        out.append(list(str(element).split('.')))
+    elif type(element) == int:
+             out.append(6)
+print(out)
+
+#out = [6, 'heLLO@', 6, 'GOod#', ('89', '88')]
+
+
+
+
+
+
+
+
+
+
+
+
