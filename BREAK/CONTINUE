@@ -1,0 +1,47 @@
+
+######################################BREAK STATEMENT######################################
+
+##3. WAP TO CHECK THE GIVEN TUPLE IS HOMOGENOUS OR NOT
+
+STRING=  eval(input('enter value of tuple :'))
+tuple=()
+Htype=type(STRING[0])
+for i in STRING:
+    if type(i) != Htype:
+        print ( 'Not homogeneous')
+        break
+else:
+    print ('Homogeneous')
+
+
+
+
+##4. WAP TO PRINT THE INITIAL INDEX OF THE GIVEN CHARACTER
+##STRING = 'INITIAL'
+
+STRING = 'INITIAL'
+char = 'I'
+
+# Initialize index variable to store the index of the character
+index = -1
+
+# Iterate through each character in the string
+for i in range(len(STRING)):
+    if STRING[i] == char:
+        index = i
+        break
+if index != -1:
+    print(f"The initial index of '{char}' in '{STRING}' is: {index}")
+
+###################################### CONTINUE STATEMENT ######################################
+
+##3. WAP TO EXTRACT ALL THE COMPLEX NUMBERS FROM THE GIVEN SET COLLECTION
+
+set=eval(input('enter set val:'))
+complexn=[]
+
+for item in set:
+    if type(item) == complex:
+        complexn.append(item)
+        continue
+print(complexn)
