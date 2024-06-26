@@ -1,0 +1,25 @@
+#############################  NESTED FOR LOOP  #############################
+## wap to get the following output
+LIST_ = [1234, 'HEllo@', 67, 7-9j, 'goOD#', 89.88]
+out = [6, 'heLLO@', 6, 'GOod#', ('89', '88')]
+
+list_ = [1234, 'HEllo@', 67, 7-9j, 'goOD#', 89.88]
+out=[]
+for element in list_:
+    if type(element) == str:
+        new_string = ''
+        for char in element:
+            if char.islower():
+                new_string += char.upper()
+            elif char.isupper():
+                new_string += char.lower()
+            else:
+                new_string += char  # Append special characters unchanged
+        out.append(new_string)
+    elif type(element) == float:
+        out.append(list(str(element).split('.')))
+    elif type(element) == int:
+             out.append(6)
+print(out)
+
+#out = [6, 'heLLO@', 6, 'GOod#', ('89', '88')]
