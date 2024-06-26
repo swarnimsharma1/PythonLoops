@@ -196,53 +196,6 @@ print(complexn)
 
 
 
-list
-
-
-##. WAP TO CREATE A LIST OF NUMBER WHOSE LAST 2 DIGITS ARE DIVISIBLE BY 4
-# list_ = [345, 653, 1098, 716, 7764, 1796, 1084]
-
-##. WAP TO CREATE THE LIST OF KEYS IF THE VALUE ARE EVEN
-# DICT_ = {'A':1, 'B':2, 'C':3, 'D':4}   #out = ['B', 'D']
-
-## WAP TO CREATE A NEW LIST, WHICH CONSIST OF NAMES STRATS WITH CONSONENTS
-# NAMES = ['APPLE', 'YOUTUBE', 'EMAIL', 'GMAIL', 'YAHOO']
-
-
-
-
-
-
-
-
-set
-##2. WAP TO EXTRACT ALL THE VOWELS IN THE STRING
-# string = 'hello have a good day'
-
-##3. TAKE STRING INPUT, IF THE LENGTH OF STRING IS EVEN GET THE REVERSE STRING ELSE ALTERNAT CHARCTER
-# string = 'hello have a good day'
-
-##4. TAKE A LIST OF INTEGER NUMBER, IF THE NUMBER IS EVEN GET SQUARE OF IT ELSE CUBE
-# list_ = [1,2,3,4,5,6,7,8]
-
-
-
-dict
-
-
-##2. WAP TO GET THE FOLLWOING OUTPUT
-# string = 'python java c++ web sql'
-# # dict_ = {'python':'nohtyp', 'java':'avaj'}
-
-##3. WAP TO GET THE FOLLWOING OUTPUT
-# string = 'python java c++ web sql'
-# # dict_ = {'python':'nohtyp', 'java':'avaj', 'c++':3, ''sql:3, 'web':3}
-
-##4. WAP TO THE FOLLOWING OUTPUT
-# DICT_ = {'a':1, 'b':2, 'c':3}
-# out: {1: 'a', 2: 'b', 3: 'c'}
-
-
 
 #############################  NESTED FOR LOOP  #############################
 ## wap to get the following output
