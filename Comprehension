@@ -1,0 +1,138 @@
+############## LIST COMPREHENSION##############
+
+##. WAP TO CREATE A LIST OF NUMBER WHOSE LAST 2 DIGITS ARE DIVISIBLE BY 4
+# list_ = [345, 653, 1098, 716, 7764, 1796, 1084]
+
+list_ = [345, 653, 1098, 716, 7764, 1796, 1084]
+last=[]
+for number in list_:
+    if (number % 100) % 4 == 0:
+        last.append(number)       
+print (last)
+  
+### COMPREHENSION ###  
+
+#var = [exp for variable in collection if condition]
+list_ = [345, 653, 1098, 716, 7764, 1796, 1084]
+Res = [number for number in  list_  if (number % 100) % 4 == 0]
+print(Res)
+
+
+
+
+
+##. WAP TO CREATE THE LIST OF KEYS IF THE VALUE ARE EVEN
+# DICT_ = {'A':1, 'B':2, 'C':3, 'D':4}   #out = ['B', 'D']
+DICT_ = {'A':1, 'B':2, 'C':3, 'D':4}   #out = ['B', 'D']
+OUT=[]
+
+for key in DICT_:
+    if DICT_[key] % 2 == 0:
+        OUT.append(key)
+print(OUT)
+
+### COMPREHENSION ###  
+RES = [key for key in DICT_ if DICT_[key] % 2 == 0 ]
+print(RES)
+
+
+
+
+## WAP TO CREATE A NEW LIST, WHICH CONSISTS OF NAMES STRATS WITH CONSONANTS
+# NAMES = ['APPLE', 'YOUTUBE', 'EMAIL', 'GMAIL', 'YAHOO']
+NAMES = ['APPLE', 'YOUTUBE', 'EMAIL', 'GMAIL', 'YAHOO']
+CONSONANTS =[]
+
+for letter in NAMES:
+    if letter[0] not in 'AEIOEaeiou':
+        CONSONANTS.append(letter)
+print(CONSONANTS)
+
+### COMPREHENSION ### 
+#var = [exp for variable in collection if condition]
+var= [letter for letter in NAMES if letter[0] not in 'AEIOEaeiou']
+print(var)
+
+
+
+
+############## SET COMPREHENSION##############
+
+#var = [exp for variable in collection if condition]
+# WAP TO EXTRACT ALL THE VOWELS IN THE STRING
+string = 'hello have a good day'
+res = {char for char in string if char in 'AEIOUaeiou'}
+print(res)
+
+
+
+
+## TAKE STRING INPUT, IF THE LENGTH OF THE STRING IS EVEN GET THE REVERSE STRING ELSE ALTERNATE CHARCTER
+string = 'hello have a good day'
+New=[]
+for i in string.split():
+    if len(i)%2==0:
+        New.append(i[::-1])
+    else:
+        New.append(i[::2])
+        
+print(New)
+###### COMPREHENSION ### 
+
+var =[i[::-1] if len(i)%2==0 else i[::2] for i in string.split()] 
+print(var)
+
+
+##4. TAKE A LIST OF INTEGER NUMBER, IF THE NUMBER IS EVEN GET SQUARE OF IT ELSE CUBE
+# list_ = [1,2,3,4,5,6,7,8]
+# out = {number ** 2 if number % 2 == 0 else number ** 3 for number in list_}
+# print(out)
+
+################################################################################################################[outputof else if condition else condition for in collection]  #syntax for ifelsecomprehension
+
+
+
+
+############## DICTIONARY COMPREHENSION##############
+
+
+## WAP TO GET THE FOLLOWING OUTPUT
+string = 'python java c++ web sql'
+# # dict_ = {'python':'nohtyp', 'java':'avaj'}
+# var = [lookup method/iteration exp for variable in collection if condition]
+res = {word: word[::-1] for word in string.split() if len(word) % 2 == 0}
+print(res)
+
+#dict_ = {'python':'nohtyp', 'java':'avaj'}
+string = 'python java c++ web sql'
+res = {}
+for word in string.split():
+    if len(word) % 2 == 0:
+        res[word] = word[::-1]  #### Store original word as key and reversed word as value, dictionary lookup #####
+print(res) 
+
+
+
+## WAP TO GET THE FOLLWOING OUTPUT
+# string = 'python java c++ web sql'
+# # dict_ = {'python':'nohtyp', 'java':'avaj', 'c++':3, ''sql:3, 'web':3}
+# res = {word: word[::-1] if len(word) % 2 == 0 else len(word) for word in string.split()}
+# print(res)
+
+
+
+
+## WAP TO THE FOLLOWING OUTPUT
+DICT_ = {'a': 1, 'b': 2, 'c': 3}
+out_ = {}
+
+for key, value in DICT_.items():
+    out_[value] = key
+
+print(out_)
+
+
+# DICT_ = {'a':1, 'b':2, 'c':3}
+# out: {1: 'a', 2: 'b', 3: 'c'}
+# out_ = {value: key for key, value in dict_.items()}
+# print(out_)
